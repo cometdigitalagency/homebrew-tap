@@ -1,8 +1,8 @@
 class Cometai < Formula
   desc "Monitor Claude AI token usage — burn rate, cost, and remaining quota"
   homepage "https://github.com/cometdigitalagency/comet-ai-tracking-node"
-  url "https://registry.npmjs.org/@comet_digital_agency/cometai/-/cometai-1.0.4.tgz"
-  sha256 "39f91b7aa61be6f2f274ba825e3e8c50f356ab726867305bfa9c300c15d2198f"
+  url "https://registry.npmjs.org/@comet_digital_agency/cometai/-/cometai-1.0.5.tgz"
+  sha256 "870a78a2e4f58a5ee9d7796d9ea1d4b9ada8068d61e6b42a528e7adc3aca68a3"
   license "MIT"
 
   depends_on "node"
