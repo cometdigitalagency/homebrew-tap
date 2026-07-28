@@ -1,18 +1,19 @@
 cask "comet-erp" do
-  version "0.1.0"
-  sha256 "3cce5f73d1a40432921297d09bdb7dd253fdd2a9d237c53701fce0555fb16770"
+  version "1.0.0"
+  sha256 "9c2ee5033672837886186c007d6928917476e466703e9a0a6e44fb12017d3cf7"
 
-  url "https://github.com/cometdigitalagency/homebrew-tap/releases/download/comet-erp-v#{version}/Comet.ERP_#{version}_aarch64.dmg"
+  url "https://github.com/cometdigitalagency/dist/releases/download/comet-erp-v#{version}/Comet.ERP_#{version}_universal.dmg",
+      verified: "github.com/cometdigitalagency/dist/"
   name "Comet ERP"
   desc "Desktop app for Comet's internal ERP/workspace tools"
-  homepage "https://comet.la/"
+  homepage "https://workspace.comet.la/"
 
   livecheck do
-    skip "No public update feed to check against"
+    url "https://github.com/cometdigitalagency/dist/releases.atom"
+    regex(/comet-erp[._-]v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on arch: :arm64
-  depends_on :macos
+  depends_on macos: :catalina
 
   app "Comet ERP.app"
 
@@ -21,5 +22,6 @@ cask "comet-erp" do
     "~/Library/Caches/la.comet.workspace",
     "~/Library/Preferences/la.comet.workspace.plist",
     "~/Library/Saved Application State/la.comet.workspace.savedState",
+    "~/Library/WebKit/la.comet.workspace",
   ]
 end
